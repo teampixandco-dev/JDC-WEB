@@ -4602,8 +4602,8 @@ select:focus {
 .awards-area {
   position: relative;
   display: block;
-  background-color: #e4e3e3;
-  padding: 0px 0 113px;
+  background-color: transparent;
+  padding: 60px 0 60px;
   z-index: 10;
 }
 
@@ -4614,7 +4614,6 @@ select:focus {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  border-top: 1px solid #d9d9d9;
   padding-top: 20px;
 }
 
@@ -4651,7 +4650,7 @@ select:focus {
 }
 
 .awards-img-box ul li+li {
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 .awards-img-box ul li a {
@@ -4671,7 +4670,8 @@ select:focus {
 }
 
 .awards-area--style2 .awards-area__inner {
-  padding-top: 100px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .awards-area--style2 .awards-area__inner .awards-contant-box {
@@ -4679,20 +4679,28 @@ select:focus {
 }
 
 .awards-area--style2 .awards-img-box ul {
-  border-left: 1px solid #d0d0d0;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-.awards-area--style2 .awards-img-box ul li+li {
-  margin-left: 0px;
+  border-left: none;
+  border-radius: 0;
 }
 
 .awards-area--style2 .awards-img-box ul li {
-  border: 1px solid #d0d0d0;
-  border-left: none;
-  border-radius: 10px;
-  padding: 31px 12px;
+  border: none;
+  padding: 0;
+  transition: all 0.4s ease;
+}
+
+.awards-area--style2 .awards-img-box ul li img {
+  filter: grayscale(1) opacity(0.5);
+  transition: all 0.4s ease;
+  max-width: 150px;
+}
+
+.awards-area--style2 .awards-img-box ul li:hover {
+  transform: translateY(-5px);
+}
+
+.awards-area--style2 .awards-img-box ul li:hover img {
+  filter: grayscale(0) opacity(1);
 }
 
 
@@ -9411,6 +9419,44 @@ select:focus {
 
 
 
+
+
+/*** 
+=============================================
+    Anniversary Logo Css
+=============================================
+***/
+.anniversary-logo {
+    position: fixed;
+    right: 20px;
+    bottom: 150px;
+    z-index: 99;
+    max-width: 120px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.anniversary-logo img {
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply; /* Removes white background */
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% { transform: translateY(0px) scale(1); }
+	50% { transform: translateY(-10px) scale(1.02); }
+	100% { transform: translateY(0px) scale(1); }
+}
+
+@media only screen and (max-width: 767px) {
+    .anniversary-logo {
+        max-width: 80px;
+        right: 10px;
+        bottom: 120px;
+    }
+}
 
 /*--------------------------------------------------------------
 # End Css 
