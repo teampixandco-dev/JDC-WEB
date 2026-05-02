@@ -9167,11 +9167,11 @@ select:focus {
 ***/
 .anniversary-logo {
   position: fixed;
-  right: 22px;
-  bottom: -142px;
+  right: 8px;
+  bottom: 4px;
   z-index: 99;
   width: 91px;
-  height: 400px;
+  height: 91px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -9183,7 +9183,7 @@ select:focus {
 }
 
 .anniversary-logo.moved-up {
-  bottom: 9px;
+  bottom: 128px;
 }
 
 .anniversary-logo img {
@@ -9204,17 +9204,75 @@ select:focus {
   }
 }
 
-@media only screen and (max-width: 1199px) {
+/* Large devices (1200px – 1399px) */
+@media (max-width: 1399px) {
   .anniversary-logo {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
+    right: 18px;
+    bottom: 28px;
   }
 }
 
-@media only screen and (max-width: 767px) {
+/* Medium devices (992px – 1199px) */
+@media (max-width: 1199px) {
+  .anniversary-logo {
+    width: 80px;
+    height: 80px;
+    right: 14px;
+    bottom: 26px;
+  }
+}
+
+/* Tablets (768px – 991px) */
+@media (max-width: 991px) {
   .anniversary-logo {
     width: 70px;
     height: 70px;
+    right: 12px;
+    bottom: 24px;
+  }
+}
+
+/* Large phones (576px – 767px) */
+@media (max-width: 767px) {
+  .anniversary-logo {
+    width: 65px;
+    height: 65px;
+    right: 10px;
+    bottom: 20px;
+  }
+
+  .anniversary-logo.moved-up {
+    bottom: 125px;
+  }
+}
+
+/* Small phones (≤ 575px) */
+@media (max-width: 575px) {
+  .anniversary-logo {
+    width: 55px;
+    height: 55px;
+    right: 33px;
+    bottom: 18px;
+  }
+
+  .anniversary-logo.moved-up {
+    bottom: 110px;
+  }
+}
+
+/* Extra small devices (≤ 400px) */
+@media (max-width: 400px) {
+  .anniversary-logo {
+    width: 48px;
+    height: 48px;
+    right: 27px;
+    bottom: 15px;
+  }
+
+  .anniversary-logo.moved-up {
+    bottom: 149px;
   }
 }
 
