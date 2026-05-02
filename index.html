@@ -194,6 +194,9 @@
         <section class="main-slider main-slider-style6">
             <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
                 "effect": "fade",
+                "fadeEffect": {
+                    "crossFade": true
+                },
                 "pagination": {
                 "el": "#main-slider-pagination",
                 "type": "bullets",
@@ -326,10 +329,10 @@
 
                 <!-- If we need navigation buttons -->
                 <div class="main-slider__nav">
-                    <div class="swiper-button-prev" id="main-slider__swiper-button-next">
+                    <div class="swiper-button-prev" id="main-slider__swiper-button-prev">
                         <i class="icon-left-arrow left"></i>
                     </div>
-                    <div class="swiper-button-next" id="main-slider__swiper-button-prev">
+                    <div class="swiper-button-next" id="main-slider__swiper-button-next">
                         <i class="icon-right-arrow right"></i>
                     </div>
                 </div>
