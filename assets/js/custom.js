@@ -825,8 +825,10 @@
 
     if ($(window).scrollTop() > 200) {
       $('.scroll-top-inner').addClass('visible');
+      $('.anniversary-logo').addClass('moved-up');
     } else {
       $('.scroll-top-inner').removeClass('visible');
+      $('.anniversary-logo').removeClass('moved-up');
     }
 
 

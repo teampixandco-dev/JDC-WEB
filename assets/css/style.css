@@ -9428,20 +9428,31 @@ select:focus {
 ***/
 .anniversary-logo {
     position: fixed;
-    right: 20px;
-    bottom: 150px;
+    right: 11px;
+    bottom: 9px;
     z-index: 99;
-    max-width: 120px;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     pointer-events: none;
-    transition: all 0.3s ease;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.anniversary-logo.moved-up {
+    bottom: 134px;
 }
 
 .anniversary-logo img {
-    width: 100%;
+    width: 75%;
     height: auto;
-    mix-blend-mode: multiply; /* Removes white background */
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
-    animation: float 3s ease-in-out infinite;
+    mix-blend-mode: multiply;
 }
 
 @keyframes float {
@@ -9450,11 +9461,17 @@ select:focus {
 	100% { transform: translateY(0px) scale(1); }
 }
 
+@media only screen and (max-width: 1199px) {
+    .anniversary-logo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .anniversary-logo {
-        max-width: 80px;
-        right: 10px;
-        bottom: 120px;
+        width: 70px;
+        height: 70px;
     }
 }
 
